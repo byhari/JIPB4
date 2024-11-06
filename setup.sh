@@ -3,8 +3,8 @@
 echo "Updating package list..."
 apt-get update
 
-echo "Installing unixODBC..."
-apt-get install -y unixodbc unixodbc-dev
+echo "Installing required packages..."
+apt-get install -y unixodbc unixodbc-dev wget unzip
 
 echo "Downloading Oracle Instant Client..."
 wget https://download.oracle.com/otn_software/linux/instantclient/instantclient-basic-linux.x64-19.8.0.0.0dbru.zip
@@ -29,9 +29,9 @@ OracleODBC-19.8=Oracle ODBC driver for Instant Client 19.8
 echo "[OracleODBC-19.8]
 Driver=OracleODBC-19.8
 DSN=OracleODBC-19.8
-ServerName=YOUR_ORACLE_SERVER
-UserName=YOUR_USERNAME
-Password=YOUR_PASSWORD
+ServerName=empdb01.emp-one.com
+UserName=fasdollar
+Password=fasdollar
 " | tee -a /etc/odbc.ini
 
 echo "Setup script completed."
