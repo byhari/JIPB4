@@ -1,3 +1,5 @@
+import os
+os.system('bash setup.sh')
 import streamlit as st
 import pyodbc
 import pandas as pd
